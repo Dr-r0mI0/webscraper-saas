@@ -1,0 +1,38 @@
+{
+  "_id": "books_scraper_test",
+  "startUrl": ["http://books.toscrape.com/catalogue/category/books/travel_2/index.html"],
+  "selectors": [
+    {
+      "id": "book_card",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root"],
+      "selector": "article.product_pod",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "title",
+      "type": "SelectorText",
+      "parentSelectors": ["book_card"],
+      "selector": "h3 a",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "price",
+      "type": "SelectorText",
+      "parentSelectors": ["book_card"],
+      "selector": ".price_color",
+      "multiple": false,
+      "regex": ""
+    },
+    {
+      "id": "availability",
+      "type": "SelectorText",
+      "parentSelectors": ["book_card"],
+      "selector": ".instock.availability",
+      "multiple": false,
+      "regex": ""
+    }
+  ]
+}
